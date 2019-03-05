@@ -7,5 +7,4 @@
   * OPH_ALL_COMB_IRAC4_mosaic.fits (624M)
 * Methods: IDL/Pyhon (Public & personal tools).
 * Results: Fig.1 published in first ODISEA paper (Cieza et al. 2018 at http://adsabs.harvard.edu/abs/2019MNRAS.482..698C)
-
 * NOTE: given the size of the mosaic images  I don't upload them to here.
