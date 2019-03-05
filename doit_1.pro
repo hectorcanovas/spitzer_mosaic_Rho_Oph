@@ -1,4 +1,4 @@
-```idl
+```IDL
 ;Code to rotate the IRAC images.
 ;
 pro doit_1
