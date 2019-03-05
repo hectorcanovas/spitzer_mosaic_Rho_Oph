@@ -1,3 +1,4 @@
+```idl
 ;Code to rotate the IRAC images.
 ;
 pro doit_1
@@ -21,4 +22,4 @@ writefits, 'OPH_ALL_COMB_IRAC2_mosaic_wcs_aligned.fits', irac_2_al, header_2_al
 stop
 return
 end
-
+```
