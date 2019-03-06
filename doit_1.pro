@@ -2,7 +2,7 @@
 pro doit_1
 
 ;Read Original Image ================================
-path   = '/Users/hcanovas/Astrofisica/papers/published/2018_cieza_git/spitzer_mosaics/data/'
+path   = '/Users/hcanovas/Astrofisica/papers/published/2018_cieza_git/fits_data/'
 irac_1 = readfits(path + 'OPH_ALL_COMB_IRAC1_mosaic.fits', header_1)
 irac_2 = readfits(path + 'OPH_ALL_COMB_IRAC2_mosaic.fits', header_2)
 irac_3 = readfits(path + 'OPH_ALL_COMB_IRAC4_mosaic.fits', header_3)
@@ -16,6 +16,7 @@ hastrom, irac_2, header_2, irac_2_al, header_2_al, header_3, CUBIC = CUBIC, inte
 
 writefits, 'OPH_ALL_COMB_IRAC1_mosaic_wcs_aligned.fits', irac_1_al, header_1_al
 writefits, 'OPH_ALL_COMB_IRAC2_mosaic_wcs_aligned.fits', irac_2_al, header_2_al
+writefits, 'OPH_ALL_COMB_IRAC4_mosaic.fits',             irac_3, header_3 ; Copy file to working directory
 
 
 
