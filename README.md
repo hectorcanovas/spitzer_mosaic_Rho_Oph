@@ -10,4 +10,5 @@
   1. Run the Python Notebooks to create the final image.
 
 * Results: Fig.1 published in first ODISEA paper (Cieza et al. 2018 at http://adsabs.harvard.edu/abs/2019MNRAS.482..698C)
-* NOTE: given the size of the mosaic images  I don't upload them to here.
+
+* NOTE: The original mosaic fits files are very heavy so I don't upload them to here. the "doit_1.pro" asks the user for the path to the files before running.
