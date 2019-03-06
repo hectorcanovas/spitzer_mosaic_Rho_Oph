@@ -1,5 +1,4 @@
-;Code to rotate the IRAC images.
-;
+;Align IRAC 1 & 2 mosaics to IRAC 4 mosaic using header astrometry.
 pro doit_1
 
 ;Read Original Image ================================
