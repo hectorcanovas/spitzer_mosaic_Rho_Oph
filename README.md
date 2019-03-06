@@ -1,4 +1,4 @@
-# Color image of the Rho-Oph SFR from Spizer/IRAC mosaics
+# Rho-Oph SFR Color image from Spizer/IRAC mosaics
 
 * Purpose: Combine Spizer/IRAC mosaics to create an infrared color image of the Rho-Ophiuchus Star Forming Region (SFR)
 * Input data: Spitzer/IRAC mosaics downloaded from: https://irsa.ipac.caltech.edu/data/SPITZER/C2D/images/OPH/MOSAICS:
