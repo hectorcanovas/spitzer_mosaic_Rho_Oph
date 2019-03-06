@@ -8,7 +8,7 @@ pro doit_3, inp_img
 
 ;Read Original Image ================================
 inp_img = file_search(inp_img)
-irac    = readfits(inp_img + '.fits', header)
+irac    = readfits(inp_img, header)
 dims    = size(irac)
 xdim    = dims[1]
 ydim    = dims[2]
