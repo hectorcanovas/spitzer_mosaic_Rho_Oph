@@ -1,17 +1,17 @@
 ;Rotate IRAC images so North (East) is Up (Left)
 ;Examples:
-; doit_2, '*IRAC4_mosaic*'
-; doit_2, '*IRAC1*aligned*'
-; doit_2, '*IRAC2*aligned*'
+; doit_2, '/Users/hcanovas/Astrofisica/papers/published/2018_cieza_git/fits_data/*IRAC4_mosaic*'
+; doit_2, 'idl_results/*IRAC1*aligned*'
+; doit_2, 'idl_results/*IRAC2*aligned*'
 pro doit_2, inp_img
 
 
 ;Read Original Image ================================
 inp_img = file_search(inp_img)
-irac  = readfits(inp_img, header)
-dims  = size(irac)
-xdim  = dims[1]
-ydim  = dims[2]
+irac    = readfits(inp_img, header)
+dims    = size(irac)
+xdim    = dims[1]
+ydim    = dims[2]
 
 ;Make the image square-larger =======================
 xdim_n  = ydim + 700
@@ -47,8 +47,11 @@ arrows, header_r, 15000, 2000,/data
 
 
 ;Write fits image =====================================
-nname = strmid(inp_img,0,strpos(inp_img,'.fits'))  
-writefits, nname + '_rotated.fits', float(irac_r), header_r
+ndir  = 'idl_results/'
+pos_1 = strpos(inp_img,'/',/reverse_search)
+pos_2 = strpos(inp_img,'.fits')
+nname = strmid(inp_img,pos_1+1,pos_2 - pos_1 - 1)
+writefits, ndir + nname + '_rotated.fits', float(irac_r), header_r
 stop
 return
 end
