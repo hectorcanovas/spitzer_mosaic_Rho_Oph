@@ -1,8 +1,8 @@
 ;Trim the aligned & rotated images
 ;Examples:
-; doit_3, '*IRAC1_mosaic_wcs_aligned_rotated*'
-; doit_3, '*IRAC2_mosaic_wcs_aligned_rotated*'
-; doit_3, '*IRAC4_mosaic_rotated*'
+; doit_3, 'idl_results/*IRAC1_mosaic_wcs_aligned_rotated.fits'
+; doit_3, 'idl_results/*IRAC2_mosaic_wcs_aligned_rotated.fits'
+; doit_3, 'idl_results/*IRAC4_mosaic_rotated.fits'
 pro doit_3, inp_img
 
 
@@ -39,8 +39,12 @@ FXADDPAR, header,'NAXIS2', ydim_n
 
 
 ;Write fits image ===================================
-nname = strmid(inp_img,0,strpos(inp_img,'.fits'))  
-writefits, nname + '_trimmed.fits', irac_trim, header
+ndir  = 'idl_results/'
+pos_1 = strpos(inp_img,'/',/reverse_search)
+pos_2 = strpos(inp_img,'.fits')
+nname = strmid(inp_img,pos_1+1,pos_2 - pos_1 - 1)
+
+writefits, ndir + nname + '_trimmed.fits', irac_trim, header
 
 stop
 return
